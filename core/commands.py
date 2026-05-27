@@ -1,10 +1,12 @@
+
 from core.storage import (
     load_tasks,
     save_tasks
 )
-
+from core.utils import validate_text
 
 def add_task(text):
+    validate_text(text)
 
     tasks = load_tasks()
 
